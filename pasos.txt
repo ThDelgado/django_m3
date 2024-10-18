@@ -1,0 +1,103 @@
+PS C:\workspace_m6\evaluacion_m3>  python -m venv venv
+PS C:\workspace_m6\evaluacion_m3> .\venv\scripts\activate
+(venv) PS C:\workspace_m6\evaluacion_m3> deactivate
+PS C:\workspace_m6\evaluacion_m3>  python -m venv django_development
+PS C:\workspace_m6\evaluacion_m3>  python -m venv django_development_1
+PS C:\workspace_m6\evaluacion_m3> .\django_development\scripts\activate
+(django_development) PS C:\workspace_m6\evaluacion_m3> deactivate
+PS C:\workspace_m6\evaluacion_m3> .\django_development_1\scripts\activate
+(django_development_1) PS C:\workspace_m6\evaluacion_m3> deactivate
+PS C:\workspace_m6\evaluacion_m3> Remove-Item -Recurse -Force .\django_development_1
+PS C:\workspace_m6\evaluacion_m3> .\django_development_1\scripts\activate
+.\django_development_1\scripts\activate: The term '.\django_development_1\scripts\activate' is not recognized as a name of a cmdlet, function, script file, or executable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+PS C:\workspace_m6\evaluacion_m3> .\django_development\scripts\activate 
+(django_development) PS C:\workspace_m6\evaluacion_m3> pip install django
+Collecting django
+  Using cached Django-5.1.2-py3-none-any.whl (8.3 MB)
+Collecting sqlparse>=0.3.1
+  Using cached sqlparse-0.5.1-py3-none-any.whl (44 kB)
+Collecting tzdata
+  Using cached tzdata-2024.2-py2.py3-none-any.whl (346 kB)
+Collecting asgiref<4,>=3.8.1
+  Using cached asgiref-3.8.1-py3-none-any.whl (23 kB)
+Collecting typing-extensions>=4
+  Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)        
+Installing collected packages: tzdata, typing-extensions, sqlparse, asgiref, django
+Successfully installed asgiref-3.8.1 django-5.1.2 sqlparse-0.5.1 typing-extensions-4.12.2 tzdata-2024.2
+WARNING: You are using pip version 22.0.4; however, version 24.2 is available.
+You should consider upgrading via the 'C:\workspace_m6\evaluacion_m3\django_development\Scripts\python.exe -m pip install --upgrade pip' command.
+(django_development) PS C:\workspace_m6\evaluacion_m3> python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\workspace_m6\evaluacion_m3\django_development\lib\site-packages (22.0.4)
+Collecting pip
+  Using cached pip-24.2-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.0.4
+    Uninstalling pip-22.0.4:
+      Successfully uninstalled pip-22.0.4
+Successfully installed pip-24.2
+(django_development) PS C:\workspace_m6\evaluacion_m3>  django-admin startproject site_django
+(django_development) PS C:\workspace_m6\evaluacion_m3> python manage.py runserver
+C:\Python310\python.exe: can't open file 'C:\\workspace_m6\\evaluacion_m3\\manage.py': [Errno 2] No such file or directory
+(django_development) PS C:\workspace_m6\evaluacion_m3> ls
+
+    Directory: C:\workspace_m6\evaluacion_m3
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          10/18/2024  3:29 PM                django_development    
+d----          10/18/2024  3:39 PM                site_django
+d----          10/18/2024  3:28 PM                venv
+
+(django_development) PS C:\workspace_m6\evaluacion_m3> cd site_django  
+(django_development) PS C:\workspace_m6\evaluacion_m3\site_django> cd site_django
+(django_development) PS C:\workspace_m6\evaluacion_m3\site_django\site_django> python manage.py runserver
+C:\Python310\python.exe: can't open file 'C:\\workspace_m6\\evaluacion_m3\\site_django\\site_django\\manage.py': [Errno 2] No such file or directory
+(django_development) PS C:\workspace_m6\evaluacion_m3\site_django\site_django> ls
+
+    Directory: C:\workspace_m6\evaluacion_m3\site_django\site_django    
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          10/18/2024  3:39 PM              0 __init__.py
+-a---          10/18/2024  3:39 PM            415 asgi.py
+-a---          10/18/2024  3:39 PM           3359 settings.py
+-a---          10/18/2024  3:39 PM            789 urls.py
+-a---          10/18/2024  3:39 PM            415 wsgi.py
+
+(django_development) PS C:\workspace_m6\evaluacion_m3\site_django\site_django> ls
+
+    Directory: C:\workspace_m6\evaluacion_m3\site_django\site_django    
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          10/18/2024  3:39 PM              0 __init__.py
+-a---          10/18/2024  3:39 PM            415 asgi.py
+-a---          10/18/2024  3:39 PM           3359 settings.py
+-a---          10/18/2024  3:39 PM            789 urls.py
+-a---          10/18/2024  3:39 PM            415 wsgi.py
+
+(django_development) PS C:\workspace_m6\evaluacion_m3\site_django\site_django> cd ..
+(django_development) PS C:\workspace_m6\evaluacion_m3\site_django> ls   
+
+    Directory: C:\workspace_m6\evaluacion_m3\site_django
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d----          10/18/2024  3:39 PM                site_django
+-a---          10/18/2024  3:39 PM            689 manage.py
+
+(django_development) PS C:\workspace_m6\evaluacion_m3\site_django> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+October 18, 2024 - 15:47:00
+Django version 5.1.2, using settings 'site_django.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
